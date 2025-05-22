@@ -22,12 +22,12 @@ import com.employee.service.EmployeeService;
 public class EmployeeController {
 	@Autowired
 	EmployeeService es;
-	@PostMapping(value="/postSingleEmp")
+	@PostMapping(value="/postsingleemp")
 	public String postEmp(@RequestBody Employee e) {
 		return es.postEmp(e);
 	}
 	
-	@PostMapping(value="/postMultiple")
+	@PostMapping(value="/postmultiple")
 	public String postEmployee(@RequestBody List<Employee> e) {
 		return es.postEmployee(e);
 	}
@@ -42,7 +42,7 @@ public class EmployeeController {
 		return es.findAll();
 	}
 	
-	@DeleteMapping (value="/deleteById/{n}")
+	@DeleteMapping (value="/deletebyid/{n}")
 	public String deleteById(@PathVariable int n) {
 		return es.deleteById(n);
 	}
